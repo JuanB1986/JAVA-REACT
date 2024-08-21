@@ -9,11 +9,12 @@ public abstract class Producto {
 	@Getter @Setter private String descripcion;
 	@Getter @Setter private int cantidadEnStock;
 	@Getter @Setter private float precioUnitario;
-	@Getter @Setter private float porcentajeGanancia;
+	@Getter protected float porcentajeGanancia;
+	@Getter protected float porcentajeDescuento;
 	@Getter @Setter private boolean disponibleParaVenta;
 
 
-	protected Producto(int id,String descripcion, float precioUnitario, float porcentajeGanancia, boolean disponibleParaVenta){
+	protected Producto(int id,String descripcion, float precioUnitario, float porcentajeGanancia, float porcentajeDescuento, boolean disponibleParaVenta){
 		this.id=this.setId(id);
 		this.cantidadEnStock=0;
 		this.descripcion=descripcion;
@@ -23,15 +24,11 @@ public abstract class Producto {
 	}
 
 	protected abstract String setId(int id);
+	public abstract float setPorcentajeGanancia(float porcentaje);
+	public abstract float setPorcentajeDescuento(float porcentaje);
+	public abstract float getPrecioVenta();
+	public abstract float getPrecioCompra();
 
-
-	public float getPrecio() {
-		return this.precioUnitario;
-	}
-
-	public float getPrecio(float porcentajeDescuento) {
-		return this.precioUnitario -= porcentajeDescuento/100.0f;
-	}
 
 	public void sumarStock(int cantidad) {
 		this.cantidadEnStock += cantidad;
@@ -40,5 +37,11 @@ public abstract class Producto {
 	public void restarStock(int cantidad) {
 		this.cantidadEnStock -= cantidad;
 	}
+
+
+
+
+
+
 
 }
