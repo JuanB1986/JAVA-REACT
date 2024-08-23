@@ -9,7 +9,6 @@ import lombok.Getter;
 import lombok.Setter;
 import models.Bebidas;
 import models.Envasados;
-import models.Limpieza;
 import models.Producto;
 
 public class Tienda {
@@ -36,6 +35,7 @@ public class Tienda {
 	public Tienda getTienda() {
 		return this;
 	}
+
 
 	public void agregarAlCarrito(Producto producto, int cantidad) {
 		productosCompraVenta.add(producto);
@@ -64,29 +64,23 @@ public class Tienda {
 	}
 
 
-
 	/**
 	 * PARTE 3: Filtrado de la lista
 	 */
 	public String obtenerComestiblesConMenorDescuento(float descuento)
 	{
 		List<Producto> productosFiltrados = new ArrayList<>();
-		productosFiltrados = this.stockProductos.stream()
-				.filter( f -> ((f instanceof Bebidas) && !((Bebidas) f).isImportado())
-							  || f instanceof Limpieza
-							  || ((f instanceof Envasados)&& !((Envasados) f).isImportado())
-							  && f.getPorcentajeDescuento()> descuento
-						)
-				.collect(Collectors.toList());
+		productosFiltrados = this.stockProductos.stream().filter(m -> ((m instanceof Bebidas) && !((Bebidas) m).isImportado() && m.getPorcentajeDescuento() < descuento)	//Saca las bebidas importadas y filtra por descuento.
+				||	((m instanceof Envasados)&& m.getPorcentajeDescuento() < descuento)																							//Envasados: filtra por porcentaje de descuento.
+				).collect(Collectors.toList());
 
 		productosFiltrados.sort(Comparator.comparing(Producto::getPrecioVenta));
 
-		List<String> lista = productosFiltrados.stream().map(m -> m.getDescripcion().toUpperCase()).toList();
+		List<String> lista = productosFiltrados.stream().map(m -> (m.getDescripcion()+" (%Desc: "+m.getPorcentajeDescuento()+" - Precio Venta: $"+m.getPrecioVenta()+")").toUpperCase()).toList();
 
-		String ret = String.join(", ", lista);
+		String ret = String.join("\n", lista);
 
 		return ret;
-
 	}
 
 
@@ -148,7 +142,7 @@ public class Tienda {
 	public String vender() {
 
 		float totalVendido=0.0f;
-		String ticketDeVenta="********************** TICKET DE VENTA KWIK-E-MART **********************\n";
+		String ticketDeVenta="********************** TICKET DE VENTA (KWIK-E-MART) ***********************\n";
 		String mensajeAgregadoATicket="";
 
 		/**
@@ -167,7 +161,6 @@ public class Tienda {
 				break;
 			}
 
-			System.out.print("ITERA "+indiceCantidades);
 			for (Producto productoStock : this.stockProductos) {
 
 				/**

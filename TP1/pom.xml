@@ -3,11 +3,11 @@
   <modelVersion>4.0.0</modelVersion>
 
   <groupId>com</groupId>
-  <artifactId>TP-Java</artifactId>
+  <artifactId>TP1</artifactId>
   <version>0.0.1-SNAPSHOT</version>
   <packaging>jar</packaging>
 
-  <name>TP-Java</name>
+  <name>TP1</name>
   <url>http://maven.apache.org</url>
 
   <properties>
@@ -15,24 +15,17 @@
   </properties>
 
   <dependencies>
-  
-    <!-- https://mvnrepository.com/artifact/org.projectlombok/lombok -->
-	<dependency>
+  	<dependency>
 	    <groupId>org.projectlombok</groupId>
 	    <artifactId>lombok</artifactId>
 	    <version>1.18.34</version>
 	    <scope>provided</scope>
 	</dependency>
-
-  
-	<!-- https://mvnrepository.com/artifact/junit/junit -->
-	<dependency>
-	    <groupId>junit</groupId>
-	    <artifactId>junit</artifactId>
-	    <version>4.13.2</version>
-	    <scope>test</scope>
-	</dependency>
-
-    
+    <dependency>
+      <groupId>junit</groupId>
+      <artifactId>junit</artifactId>
+      <version>3.8.1</version>
+      <scope>test</scope>
+    </dependency>
   </dependencies>
 </project>

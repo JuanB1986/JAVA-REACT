@@ -62,12 +62,12 @@ public class Bebidas extends Producto {
 	public float setCalorias(float calorias) {
 
 		if (this.getGraduacionAlcoholica()>=2.1f && this.getGraduacionAlcoholica() <= 4.5f) {
-			return calorias * 1.25f;
+			return this.getGraduacionAlcoholica() * 1.25f;
 		}
 		if (this.getGraduacionAlcoholica()>4.5f) {
-			return calorias * 1.5f;
+			return this.getGraduacionAlcoholica() * 1.5f;
 		}
-		return calorias;
+		return this.getGraduacionAlcoholica();
 	}
 
 

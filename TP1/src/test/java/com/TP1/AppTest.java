@@ -1,4 +1,4 @@
-package com.TP_Java;
+package com.TP1;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

@@ -22,18 +22,20 @@ public class Limpieza extends Producto {
 	public float setPorcentajeGanancia(float porcentaje) {
 		if (this.tipoAplicacion==TipoProductoLimpieza.COCINA || this.tipoAplicacion==TipoProductoLimpieza.MULTIUSO)
 		{
-			this.porcentajeGanancia = this.validaNumeroReal(porcentaje ,25.0f, 10.0f);
+			this.porcentajeGanancia = this.validaNumeroReal(porcentaje ,25.0f, 0.0f);
+			return this.porcentajeGanancia;
 		}
 		else
 		{
-			this.porcentajeGanancia = this.validaNumeroReal(porcentaje ,25.0f, 0.0f);
+			this.porcentajeGanancia = this.validaNumeroReal(porcentaje ,25.0f, 10.0f);
+			return this.porcentajeGanancia;
 		}
-		return this.porcentajeGanancia;
+
 	}
 
 	@Override
 	public float setPorcentajeDescuento(float porcentaje) {
-		this.porcentajeDescuento = this.validaNumeroReal(porcentaje ,10.0f, 0.0f);
+		this.porcentajeDescuento = this.validaNumeroReal(porcentaje ,20.0f, 0.0f);
 		return this.porcentajeDescuento;
 	}
 

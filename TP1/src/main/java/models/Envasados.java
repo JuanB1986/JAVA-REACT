@@ -33,7 +33,7 @@ public class Envasados extends Producto {
 
 	@Override
 	public float setPorcentajeDescuento(float porcentaje) {
-		this.porcentajeDescuento = this.validaNumeroReal(porcentaje ,10.0f, 0.0f);
+		this.porcentajeDescuento = this.validaNumeroReal(porcentaje ,15.0f, 0.0f);
 		return this.porcentajeDescuento;
 	}
 

@@ -37,11 +37,4 @@ public abstract class Producto {
 	public void restarStock(int cantidad) {
 		this.cantidadEnStock -= cantidad;
 	}
-
-
-
-
-
-
-
 }
