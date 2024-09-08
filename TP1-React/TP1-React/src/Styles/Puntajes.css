@@ -11,7 +11,7 @@ table{
 
 table caption
 {    
-    background-color: rgb(59, 93, 77);
+    background-color: rgb(27, 100, 63);
     color: aliceblue;
     font-weight: 700;
     font-size: larger;
@@ -31,9 +31,9 @@ table tbody tr th{
 tbody td
 {
     text-align: center;
-    color: rgb(218, 246, 212);
+    color: rgb(67, 83, 63);
     border: 1px solid rgb(128, 128, 128);
-    background-color: rgb(106, 124, 81);
+    background-color: rgb(189, 208, 163);
     font-weight: 700;
     width: 200px;
     border-radius: 2px;

@@ -1,4 +1,4 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import Puntajes from './Puntajes';
 import '../Styles/Juego.css'
 import imagen from '../Img/pxfuel.jpg'
@@ -21,6 +21,7 @@ const Juego = () => {
     const [numeroAdivinar, setNumeroAdivinar]= useState(0);
     const [numeroIngresado, setNumeroIngresado]=useState(0);
     const [mensaje, setMensaje]=useState("");
+    const [puntajeMasAlto, setPuntajeMasAlto]=useState(" - ");
 
     const iniciarPartida = () => {
         setPuntaje(PUNTAJE_INICIAL);
@@ -31,6 +32,24 @@ const Juego = () => {
 
     const inputNumero = (event) =>{      
         setNumeroIngresado(event.target.value);
+    }
+
+
+    useEffect(() => {
+        calcularPuntajeMasAlto();
+    });
+
+    const calcularPuntajeMasAlto = () =>{
+        var punto=0;
+        var ronda=0;  
+        puntosAcumulados.map( m=> 
+        {
+            if(m.pun > punto){
+                punto = m.pun;
+                ronda = m.ron;
+            }
+        });
+        setPuntajeMasAlto(punto + " puntos en ronda: "+ronda)       
     }
 
     const botonAdivinarNumero = () =>{
@@ -46,6 +65,7 @@ const Juego = () => {
                 puntajesObject.pun=puntaje;
                 puntajesObject.ron=ronda;
                 setPuntosAcumulados(m=>[...m,puntajesObject]);            
+                calcularPuntajeMasAlto();           
             }
             else
             {            
@@ -67,7 +87,8 @@ const Juego = () => {
     
                     puntajesObject.pun=0;
                     puntajesObject.ron=ronda;
-                    setPuntosAcumulados(m=>[...m,puntajesObject]);                       
+                    setPuntosAcumulados(m=>[...m,puntajesObject]);  
+                    calcularPuntajeMasAlto();                     
                 }
             }
         }
@@ -75,6 +96,7 @@ const Juego = () => {
         {
             setMensaje("Ingrese un número entre 1 y 20");
         }
+        
     }
 
 
@@ -92,17 +114,18 @@ const Juego = () => {
             <label id='labelInpu1'>Ingresar número</label>
             <br></br>
             <input id='input1' type='number' disabled={!partida} onChange={inputNumero}></input>               
-            <p id='lblPuntaje'>Puntaje: {puntaje}</p>
+            <p id='lblPuntaje'>Puntaje actual: {puntaje}</p>
+            <p id='lblPuntaje2'>Puntaje más alto: {puntajeMasAlto}</p>
             <hr></hr>
-            <button class='boton' disabled={partida} onClick={iniciarPartida}>Comenzar Ronda</button>
             <button class='boton' disabled={!partida} onClick={botonAdivinarNumero} >Adivinar</button>
+            <button class='boton' disabled={partida} onClick={iniciarPartida}>Comenzar Ronda</button>
+            
             <hr></hr>
             <p id='labelMensaje'>{mensaje}</p>
         </div>
 
         <hr></hr>
-        <Puntajes props={puntosAcumulados}></Puntajes>
-                
+        <Puntajes props={puntosAcumulados}></Puntajes>      
     </div>
   )
 }
