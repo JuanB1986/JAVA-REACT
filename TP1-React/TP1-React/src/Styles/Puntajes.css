@@ -1,0 +1,40 @@
+
+table{
+    border: 1px solid rgb(128, 128, 128);
+    margin-top: 20px;
+    margin-left: 30%;
+    margin-right: 30%;
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+}
+
+
+table caption
+{    
+    background-color: rgb(59, 93, 77);
+    color: aliceblue;
+    font-weight: 700;
+    font-size: larger;
+    border: 1px solid rgb(128, 128, 128);
+    height: 25px;
+}
+
+table tbody tr th{
+    border: 1px solid rgb(128, 128, 128);
+    background-color: rgb(66, 134, 102);
+    color: cornsilk;
+    border-radius: 2px;
+}
+
+
+/*Apunta a las celdas*/
+tbody td
+{
+    text-align: center;
+    color: rgb(218, 246, 212);
+    border: 1px solid rgb(128, 128, 128);
+    background-color: rgb(106, 124, 81);
+    font-weight: 700;
+    width: 200px;
+    border-radius: 2px;
+}

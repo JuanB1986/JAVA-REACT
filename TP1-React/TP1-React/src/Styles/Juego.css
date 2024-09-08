@@ -1,0 +1,91 @@
+#fondo{
+    background-image: url("../Img/pxfuel.jpg");
+    height: 800px;
+}
+
+header{
+    background-color: rgb(86, 81, 74);
+}
+
+header h2
+{
+    background-color: rgb(86, 81, 74);
+    color: rgb(221, 221, 124);
+    text-align: center;  
+}
+
+header p
+{
+    background-color: rgb(86, 81, 74);
+    color: rgb(210, 210, 210);
+    text-align: center; 
+    font-size: 17px;
+    margin-left: 5%;
+    margin-right: 5%;
+
+}
+
+#contenedor
+{
+    border: 1px solid rgb(255, 255, 255);
+    margin-right: 25%;
+    margin-left: 25%;
+    border-radius: 10px;
+    background-color:rgb(152, 179, 127);
+}
+#labelInpu1
+{
+    margin-left: 3%;
+    font-size: large;
+    font-weight: 700;
+    color: rgb(64, 82, 54);
+    
+}
+#input1
+{
+    border: 2px solid gray;
+    text-align: center;
+    font-weight: 700;
+    margin-left: 3%;
+    margin-right: 3%;
+    margin-top: 5px;
+    width: 93%;
+    height: 25px;
+    border-radius: 10px;
+}
+#lblPuntaje
+{
+    margin-left: 3%;
+    margin-right: 3%;
+    border-radius: 9px;
+    font-style: bold;
+    font-weight: 700;
+    text-align: center;
+    font-size: 20px;
+    color: rgb(60, 2, 253);
+}
+
+#labelMensaje
+{
+    border-radius: 10px;    
+    font-size:larger;
+    text-align: center;
+    background-color: rgb(56, 117, 134);
+    font-weight: 900;
+    color: rgb(226, 237, 246);
+    margin-left: 3%;
+    margin-right: 3%;    
+}
+
+
+.boton
+{
+    background-color: rgb(202, 211, 160);
+    border: 1px solid gray;
+    height: 40px;
+    width: 150px;
+    margin-left: 1%;
+    margin-bottom: 2%;
+    font-size: medium;
+    border-radius: 10px;
+}
