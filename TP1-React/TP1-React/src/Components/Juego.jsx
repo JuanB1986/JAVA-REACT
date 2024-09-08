@@ -106,7 +106,7 @@ const Juego = () => {
             <h2>Java/React LAB - TP1: Juego</h2>   
             <p>Instrucciones: Presionar el botón 'Comenzar Ronda' e Ingresar
                 números entre 1 y 20, una vez ingresado, presionar el botón 'Adivinar'.
-                Aparecerán pistan en la etiqueta debajo de los botones.
+                Aparecerán pistas en la etiqueta debajo de los botones.
             </p>
         </header>
 
