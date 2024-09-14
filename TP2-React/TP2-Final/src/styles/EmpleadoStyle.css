@@ -1,0 +1,63 @@
+.EmpleadoStyle_contenedor{
+    border: 1px solid rgb(61, 62, 65);
+    border-radius: 10px;
+    margin-top: 2%;
+    background-color: rgb(158, 184, 128);
+    width: 300px;
+    height: auto;
+    text-align: center;
+    margin-left: 37%;
+}
+
+.EmpleadoStyle_label{
+    font-size: medium;
+    color: rgb(61, 109, 85);
+    font-weight: 600;
+
+}
+.EmpleadoStyle_input{
+    font-size: medium;
+    color: rgb(59, 119, 121);
+    width: 70%;
+    height: 25px;
+    border-radius: 8px;
+    border: 1px solid rgb(73, 119, 72);
+}
+
+.EmpleadoStyle_button{
+    margin-top: 10px;
+    width: 55%;
+    height: 30px;
+    background-color: rgb(37, 57, 57);
+    color: white;
+    border-radius: 20px;
+    border: 1px solid white;
+    font-weight: 700;
+    margin-bottom: 2%;    
+}
+
+/*Estilos de tabla Lista Empleados*/
+.EmpleadoTabla_contenedor{
+    background-color: rgb(255, 255, 255);
+    width: 50%;   
+    text-align: center;
+    margin-left: 25%;
+    margin-top: 2%;
+    border: 1px solid rgb(83, 83, 49);
+    border-radius: 3px;
+}
+
+.EmpleadoTabla_row{
+    background-color: rgb(84, 111, 76);
+    color: rgb(255, 255, 255);
+    font-size: large;
+
+}
+
+.EmpleadoTabla_rd{
+    background-color: rgb(138, 165, 138);
+    color: rgb(46, 70, 113);
+    font-size: large;
+    font-weight: 800;
+    
+}
