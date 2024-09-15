@@ -1,14 +1,10 @@
 import React, { useEffect, useState } from 'react';
-import { Link } from 'react-router-dom';
 import JSON_SERVER_URL from '../../json-server-config';
 import BarraNavegacion from '../../componentes/BarraNavegacion';
-// <Link to="/nuevo-empleado">Agregar Nuevo Empleado</Link>
-
 import '../../styles/EmpleadoStyle.css'
 
 const ListaEmpleados = () => {
     const [empleados, setEmpleados] = useState([]);
-    const [loading, setLoading] = useState(true);
 
     useEffect(() => {
       
@@ -16,20 +12,16 @@ const ListaEmpleados = () => {
             .then(response => response.json())
             .then(data => {
                 setEmpleados(data);
-                setLoading(false);
             })
             .catch(error => {
                 console.error('Error fetching empleados:', error);
-                setLoading(false);
             });
     }, []);
 
-    if (loading) return <p>Cargando...</p>;
-
     return (
-        <div>
+        <div >
             <BarraNavegacion></BarraNavegacion>
-            <table className='EmpleadoTabla_contenedor'>
+            <table className='EmpleadoTabla_tabla'>
                 <thead>
                     <tr className='EmpleadoTabla_row'>
                         <th>Id</th>

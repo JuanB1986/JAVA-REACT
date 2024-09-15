@@ -7,14 +7,14 @@ export const ProveedorAutenticacion = ({ children }) => {
 
     const login = (token) => {
         localStorage.setItem("isAuthenticated", 'true');
-        localStorage.setItem("token", token);
+       // localStorage.setItem("token", token);
         setIsAuthenticated(true);
         setToken(token);
     };
 
     const logout = () => {
         localStorage.setItem("isAuthenticated", 'false');
-        localStorage.removeItem("token");
+       // localStorage.removeItem("token");
         setIsAuthenticated(false);
         setToken(null);
     };

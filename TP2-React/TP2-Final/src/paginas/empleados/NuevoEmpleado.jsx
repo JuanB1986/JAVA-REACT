@@ -1,5 +1,4 @@
 import React, { useState } from 'react';
-import { useEffect } from 'react';
 import JSON_SERVER_URL from '../../json-server-config';
 import BarraNavegacion from '../../componentes/BarraNavegacion';
 
@@ -11,12 +10,10 @@ const NuevoEmpleado = () => {
        
     const inputName=(event)=>{
         setNombre(event.target.value);
-        console.log(nombre);
     }
 
     const inputPuesto=(event)=>{
         setPuesto(event.target.value);
-        console.log(puesto);
     }
 
     const buttonClick = () =>{

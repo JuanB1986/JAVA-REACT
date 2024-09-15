@@ -1,4 +1,4 @@
-.EmpleadoStyle_contenedor{
+.EmpleadoStyle_contenedor{    
     border: 1px solid rgb(61, 62, 65);
     border-radius: 10px;
     margin-top: 2%;
@@ -36,27 +36,27 @@
     margin-bottom: 2%;    
 }
 
-/*Estilos de tabla Lista Empleados*/
-.EmpleadoTabla_contenedor{
+/*Tabla*/
+.EmpleadoTabla_tabla{
     background-color: rgb(255, 255, 255);
-    width: 50%;   
+    width: 65%;   
     text-align: center;
-    margin-left: 25%;
+    margin-left: 17%;
     margin-top: 2%;
     border: 1px solid rgb(83, 83, 49);
     border-radius: 3px;
 }
 
 .EmpleadoTabla_row{
-    background-color: rgb(84, 111, 76);
+    background-color: rgb(37, 57, 57);
     color: rgb(255, 255, 255);
     font-size: large;
 
 }
 
 .EmpleadoTabla_rd{
-    background-color: rgb(138, 165, 138);
-    color: rgb(46, 70, 113);
+    background-color: rgb(158, 184, 128);
+    color: rgb(53, 69, 53);
     font-size: large;
     font-weight: 800;
     

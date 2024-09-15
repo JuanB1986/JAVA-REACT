@@ -1,11 +1,8 @@
 #BarraNav_contenedor{
     background-color: rgb(77, 78, 74);
     text-align: center;
-    border-radius: 5px;
     border: 2px solid rgb(157, 194, 113);
-
 }
-
 
 #BarraNav_titulo{
     color: rgb(255, 255, 255);
@@ -15,10 +12,9 @@
 .BarraNav_button{
     width: 120px;
     height: 30px;
-    /*background-color: rgb(86, 126, 101);*/
-    background-color: rgb(121, 135, 108);
-    border: 0px;
-    border-radius: 10px;
+    background-color: rgb(79, 122, 121);
+    border: 1px solid rgb(255, 255, 255);
+    border-radius: 5px;
     font-size: 17px;
     color: rgb(255, 255, 255);
     margin-left: 1%;
@@ -27,22 +23,10 @@
 }
 
 .BarraNav_button:hover{
-    background-color: rgb(142, 124, 97);
+    background-color: rgb(119, 138, 109);
 
 }
 
-.BarraNav_button_sesion{
-    width: 120px;
-    height: 30px;
-    background-color: rgb(165, 102, 68);
-    border: 0px;
-    border-radius: 10px;
-    font-size: 17px;
-    color: aliceblue;
-    margin-left: 1%;
-    margin-right: 1%;
-    margin-bottom: 1%;
-}
 
 .BarraNav_button_sesion:hover{
     background-color: rgb(142, 124, 97);

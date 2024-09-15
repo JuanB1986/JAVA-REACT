@@ -1,9 +1,11 @@
 #Login_contenedor{
-    background-color: rgb(132, 99, 73);
+    background-color: rgb(145, 175, 145);
     border-radius: 10px;
+    border: 1px solid rgb(79, 97, 80);
     width: 300px;
-    height: 250px;
+    height: auto;
     margin-left: 40%;
+    margin-top: 5%;
 }
 
 .Login_input{
@@ -12,42 +14,44 @@
     margin-left: 4%;
     margin-right: 5%;
     margin-bottom: 5%;
-    border: 0px;
+    border: 1px solid rgb(255, 255, 255);
     border-radius: 5px;
-    background-color: rgb(255, 255, 255);
+    background-color: rgb(106, 131, 110);
     font-size: medium;
-    color: rgb(29, 116, 87);
+    color: rgb(255, 255, 255);
   
 }
 
 .Login_label{
     margin-left: 4%;
-    color:  rgb(191, 238, 124);
-    font-size: large;
-    font-style: italic;
+    color:  rgb(255, 255, 255);
+    font-size: medium;
 }
 
 
 #Login_titulo{
     text-align: center;
-    color: rgb(161, 152, 101);
+    color: rgb(255, 255, 255);
+    margin: 0%;
 }
 
 #Login_loginButton{
-    width: 80%;
-    margin-left: 10%;
+    width: 55%;
+    margin-left: 23%;
     margin-top: 0%;
+    margin-bottom: 5%;
     height: 35px;
     border-radius: 20px;
-    border: 0px;
-    font-size: larger;
-    background-color: rgb(199, 170, 132);
-    color: rgb(61, 48, 29);
+    border: 1px solid rgb(255, 255, 255);
+    font-size: medium;
+    background-color: rgb(108, 148, 106);
+    color: rgb(254, 254, 254);
 }
 
 #Login_errorLabel{
     text-align: center;
     margin-top: 5px;
-    color: rgb(206, 212, 19);
+    color: rgb(245, 24, 24);
     font-size: large;
+    font-weight: 700;
 }
