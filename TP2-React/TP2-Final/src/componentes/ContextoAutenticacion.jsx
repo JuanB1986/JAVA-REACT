@@ -1,23 +1,11 @@
 import React, { createContext, useContext, useState } from 'react';
+import { useAuth } from '../hooks/useAuth';
+
 const AutenticacionContext = createContext();
 
 export const ProveedorAutenticacion = ({ children }) => {
-    let [isAuthenticated, setIsAuthenticated] = useState(false);
-    let [token, setToken] = useState(null);
 
-    const login = (token) => {
-        localStorage.setItem("isAuthenticated", 'true');
-       // localStorage.setItem("token", token);
-        setIsAuthenticated(true);
-        setToken(token);
-    };
-
-    const logout = () => {
-        localStorage.setItem("isAuthenticated", 'false');
-       // localStorage.removeItem("token");
-        setIsAuthenticated(false);
-        setToken(null);
-    };
+    const { isAuthenticated, token, login, logout } = useAuth();
 
     return (
         <AutenticacionContext.Provider value={{isAuthenticated, token, login, logout }}>

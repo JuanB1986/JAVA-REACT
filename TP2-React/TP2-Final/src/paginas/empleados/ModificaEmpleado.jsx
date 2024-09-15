@@ -40,7 +40,6 @@ const ModificaEmpleado = () => {
             })
             .then(data => {
                 console.log('Respuesta del servidor:', data);
-                setPostId(data.id);
             })
             .catch(error => {
                 console.error('Hubo un problema con la solicitud:', error);

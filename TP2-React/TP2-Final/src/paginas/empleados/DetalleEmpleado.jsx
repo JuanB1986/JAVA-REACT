@@ -1,6 +1,4 @@
 import BarraNavegacion from '../../componentes/BarraNavegacion';
-import { useParams } from 'react-router-dom';
-import { useEffect } from 'react';
 import React, { useState } from 'react';
 import JSON_SERVER_URL from '../../json-server-config';
 

@@ -6,15 +6,11 @@ import '../../styles/EmpleadoStyle.css'
 const BajaEmpleado = () => {
 
     const [inpudData, setInputData]=useState("");
-
     const url_delete = JSON_SERVER_URL+'/'+inpudData;
-
   
     const buttonClick = () =>{
 
-      console.log(url_delete);
-
-        const requestOptions = {
+         const requestOptions = {
           method: 'DELETE',
           headers: { 'Content-Type': 'application/json' },
         };
@@ -23,7 +19,7 @@ const BajaEmpleado = () => {
             .then(response => {
               if (response.ok) {
                 console.log('Recurso eliminado con éxito');
-                return response.json(); // Si necesitas manejar la respuesta
+                return response.json(); 
               } else {
                 console.error('Error al eliminar el recurso');
               }
@@ -40,7 +36,7 @@ const BajaEmpleado = () => {
       <BarraNavegacion></BarraNavegacion>
       <div className='EmpleadoStyle_contenedor'>        
         <label className='EmpleadoStyle_label'> Eliminar por id: </label>
-        <input className='EmpleadoStyle_input' type='text' onChange={inputHandler} value={inpudData}></input>
+        <input className='EmpleadoStyle_input' type='text' onChange={inputHandler} value={inpudData} ></input>
         <br></br>
         <button className='EmpleadoStyle_button' onClick={buttonClick}>Eliminar</button>
       </div>

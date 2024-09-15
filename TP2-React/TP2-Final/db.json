@@ -1,19 +1,19 @@
 {
   "empleados": [
     {
-      "nombre": "juan",
-      "puesto": "empleado",
+      "nombre": "Juan Banquero",
+      "puesto": "Técnico Electrónico",
       "id": "1"
-    },
-    {
-      "id": "3",
-      "nombre": "Nikola Tesla",
-      "puesto": "Ingenieria"
     },
     {
       "nombre": "Luis Salinas",
       "puesto": "Musico",
       "id": "615f"
+    },
+    {
+      "id": "b7b7",
+      "nombre": "Steve Jobs",
+      "puesto": "Empresario"
     }
   ]
 }
