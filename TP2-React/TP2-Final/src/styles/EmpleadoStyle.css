@@ -1,3 +1,8 @@
+.EmpleadoStyle_fondo{
+    background-image: url('/public/images/image.jpg');
+    height: 500px;
+}
+
 .EmpleadoStyle_contenedor{    
     border: 1px solid rgb(61, 62, 65);
     border-radius: 10px;
@@ -36,12 +41,20 @@
     margin-bottom: 2%;    
 }
 
+.EmpleadoStyle_mensaje{
+    color: rgb(15, 45, 242);
+    font-size: 17px;
+    font-weight: 800;
+}
+
+
+
 /*Tabla*/
 .EmpleadoTabla_tabla{
     background-color: rgb(255, 255, 255);
     width: 65%;   
     text-align: center;
-    margin-left: 15%;
+    margin-left: 18%;
     margin-top: 2%;
     border: 1px solid rgb(83, 83, 49);
     border-radius: 3px;

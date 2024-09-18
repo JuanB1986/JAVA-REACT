@@ -1,18 +1,22 @@
 
 /*Home*/
-
-#EmpleadoStyle_home_contenedor{
+.EmpleadoStyle_home_contenedor{
     background-image: url('/public/images/image.jpg');
-    min-height: 600px;
+    height: 500px;
     width: 100%;
     text-align: center;
-    opacity: 50%;
 }
-
 
 #EmpleadoStyle_home_h3{
     margin: 0%;
     padding-top: 14px;
     text-align: center;
+}
 
+#EmpleadoStyle_home_titulo{
+
+    font-size: x-large;
+    background-color: rgb(22, 22, 220);
+    opacity: 60%;
+    color: rgb(255, 255, 255);
 }

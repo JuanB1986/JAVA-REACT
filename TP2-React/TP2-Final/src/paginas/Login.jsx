@@ -33,7 +33,7 @@ const Login = () => {
 
     return (
         
-        <div>   
+        <div className='Login_fondo'>   
             <BarraNavegacion></BarraNavegacion>
             <div id='Login_contenedor'>
                 <h2 id='Login_titulo'>Login</h2>

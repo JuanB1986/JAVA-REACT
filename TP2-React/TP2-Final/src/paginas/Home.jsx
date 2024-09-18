@@ -4,13 +4,13 @@ import '../styles/HomeStyle.css'
 
 const Home = () => {
     return (
-        <div >
+        <div className='EmpleadoStyle_home_contenedor'>
             <BarraNavegacion></BarraNavegacion>    
-                 
-            <div id='EmpleadoStyle_home_contenedor'>
-
+            <div id='EmpleadoStyle_home_titulo'>
+                <h1>
+                    Bienvenidos al sistema de gestión de empleados.
+                </h1>
             </div>
-
         </div>
     );
 };

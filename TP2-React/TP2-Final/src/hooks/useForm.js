@@ -12,12 +12,20 @@ const useForm = (initialValues, validate) => {
             [name]: value,
         });
     };
-
+   
     const handleSubmit = async (event) => {
-        event.preventDefault();
-        setErrors(validate(values));
+        if (event) event.preventDefault();
         setIsSubmitting(true);
+        const validationErrors = validate(values);
+        setErrors(validationErrors);
+        
+        if (Object.keys(validationErrors).length === 0) {
+            return true; 
+        } else {
+            return false; 
+        }
     };
+
 
     return {
         values,
@@ -29,3 +37,4 @@ const useForm = (initialValues, validate) => {
 };
 
 export default useForm;
+

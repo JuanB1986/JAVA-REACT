@@ -19,7 +19,7 @@ const ListaEmpleados = () => {
     }, []);
 
     return (
-        <div >
+        <div className='EmpleadoStyle_fondo'>
             <BarraNavegacion></BarraNavegacion>
             <table className='EmpleadoTabla_tabla'>
                 <thead>
